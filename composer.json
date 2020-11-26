@@ -1,0 +1,16 @@
+{
+  "name": "pointotech/code-igniter-tools",
+  "description": "Development tools for CodeIgniter.",
+  "version": "0.9.9",
+  "type": "library",
+  "license": "GPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "Pointotech",
+      "email": "pointotechrimouski@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.2"
+  }
+}
