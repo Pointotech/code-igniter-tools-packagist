@@ -20,19 +20,20 @@ class CodeIgniterRoutesFinder
     return array_merge($result, $configuration_routes);
   }
 
+  /**
+   * @return CodeIgniterRoutesOptions
+   */
+  public static function routes_options()
+  {
+    $ci = &get_instance();
+    return new CodeIgniterRoutesOptionsImpl($ci->router);
+  }
+
   private static function get_configuration_routes()
   {
     $ci = &get_instance();
 
-    $result = array_merge(
-      $ci->router->routes,
-      [
-        'default_controller' => $ci->router->default_controller,
-        'translate_uri_dashes' => $ci->router->translate_uri_dashes,
-      ]
-    );
-
-    return $result;
+    return json_decode(json_encode($ci->router->routes));
   }
 
   private static function get_all_controller_routes()

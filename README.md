@@ -11,7 +11,7 @@ composer require pointotech/code-igniter-tools
 ## Usage
 
 ```php
-use Pointotech\CodeIgniter\Tools;
+use Pointotech\CodeIgniter\Tools\CodeIgniterRoutesFinder;
 
 echo "Routes:\n" . json_encode(CodeIgniterRoutesFinder::find(), JSON_PRETTY_PRINT) . "\n";
 ```
