@@ -1,7 +1,7 @@
 {
   "name": "pointotech/code-igniter-tools",
   "description": "Development tools for CodeIgniter.",
-  "version": "0.9.9",
+  "version": "0.9.90",
   "type": "library",
   "license": "GPL-3.0-or-later",
   "authors": [
@@ -11,6 +11,11 @@
     }
   ],
   "require": {
-    "php": ">=7.2"
+    "php": ">=7.2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Pointotech\\CodeIgniter\\Tools\\": "src"
+    }
   }
 }
