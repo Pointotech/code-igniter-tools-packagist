@@ -2,7 +2,7 @@
 
 namespace Pointotech\CodeIgniter\Tools;
 
-class CodeIgniterRoutesOptionsImpl implements CodeIgniterRoutesOptions
+class CodeIgniterRoutingOptionsImpl implements CodeIgniterRoutingOptions
 {
   function default_controller_url()
   {

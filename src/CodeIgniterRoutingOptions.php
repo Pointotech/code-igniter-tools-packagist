@@ -2,7 +2,7 @@
 
 namespace Pointotech\CodeIgniter\Tools;
 
-interface CodeIgniterRoutesOptions
+interface CodeIgniterRoutingOptions
 {
   /**
    * @return string

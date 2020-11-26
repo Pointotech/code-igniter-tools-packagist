@@ -2,9 +2,16 @@
 
 namespace Pointotech\CodeIgniter\Tools;
 
+/**
+ * Finds CodeIgniter routes and routing options.
+ */
 class CodeIgniterRoutesFinder
 {
-  public static function find()
+  /**
+   * Get all routes, including manually-specified routes and automatic routes
+   * based on controller/method names.
+   */
+  public static function all_routes()
   {
     $result = [];
     foreach (self::get_all_controller_routes() as $controller_name => $controller_routes) {
@@ -21,19 +28,21 @@ class CodeIgniterRoutesFinder
   }
 
   /**
-   * @return CodeIgniterRoutesOptions
+   * Gets routing options.
+   * 
+   * @return CodeIgniterRoutingOptions
    */
-  public static function routes_options()
+  public static function routing_options()
   {
     $ci = &get_instance();
-    return new CodeIgniterRoutesOptionsImpl($ci->router);
+    return new CodeIgniterRoutingOptionsImpl($ci->router);
   }
 
   private static function get_configuration_routes()
   {
     $ci = &get_instance();
 
-    return json_decode(json_encode($ci->router->routes));
+    return json_decode(json_encode($ci->router->routes), true);
   }
 
   private static function get_all_controller_routes()
